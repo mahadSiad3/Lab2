@@ -1,17 +1,17 @@
-/*
-let students = ['adam',"bob","tommy","oussama","billy"]
-let grades = [5,3,7,6,10]
-students.forEach((student,index) => {
-console.log(student+" has a grade of "+grades[index])
+
+let firstStudents = ['adam',"bob","tommy","oussama","billy"]
+let firstGrades = [5,3,7,6,10]
+firstStudents.forEach((student,index) => {
+console.log(student+" has a grade of "+firstGrades[index])
 });
 
-let numbers = [1,2,3,4,5,6,7,8,9,10]
+let firstNumbers = [1,2,3,4,5,6,7,8,9,10]
 
 
-let doubledNumbers = numbers.map(num => num * 2);
+let doubledNumbers = firstNumbers.map(num => num * 2);
 console.log(doubledNumbers)
 
-let oddEven= numbers.map((number)=>{
+let oddEven= firstNumbers.map((number)=>{
     if(number%2==0){
         return number + " is Even"
     }
@@ -21,12 +21,12 @@ let oddEven= numbers.map((number)=>{
 })
 console.log(oddEven)
 
-let squred = numbers.map((number)=>{
+let squred = firstNumbers.map((number)=>{
     return  "square root of "+number+" is: "+ Math.sqrt(number) 
 })
 console.log(squred)
 
-let power = numbers.map((number)=>{
+let power = firstNumbers.map((number)=>{
     return Math.pow(number,15)
 })
 console.log(power)
@@ -104,9 +104,12 @@ let lastStudents =  [
         return student.grade>5 && student.name[0]==="b"
     })
     console.log(failedStudent)
-*/
 
-    let students = [{
+
+
+
+
+    let ListedStudents = [{
         name:"Alice",
         age:20,
         grades:[
@@ -141,7 +144,7 @@ let lastStudents =  [
         ]
     
     }]
-   students.forEach(student =>{
+   ListedStudents.forEach(student =>{
         let avg=0
         student.grades.forEach(grade=>{
             avg += grade
@@ -150,9 +153,9 @@ let lastStudents =  [
     console.log(avg)
     console.log(student.name)    
     })
-    console.table(students)
+    console.table(ListedStudents)
 
-   let studentsummary = students.map ((student) =>{
+   let studentsummary = ListedStudents.map ((student) =>{
     let summary = student.name + "is " + student.age+ " years old and has and average grade of : "+ student.averageGrade
     return summary
 })
@@ -164,5 +167,5 @@ console.log(studentsummary)
 //     return "student with honor roll " + student.name + " has a grade of "+obj
 // })
 // console.log(honorRoll)
-const honorRoll = students.filter(student => student.averageGrade >= 85);
+const honorRoll = ListedStudents.filter(student => student.averageGrade >= 85);
 console.table(honorRoll);

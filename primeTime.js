@@ -15,6 +15,3 @@ for (var counter = 0; counter <= 20; counter++) {
     }
 }
 
-for(let i=num; i<= num;i++){
-    
-}
